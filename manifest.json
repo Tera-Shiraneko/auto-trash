@@ -1,0 +1,16 @@
+{
+	"files": {
+		"Readme.md": "26c8f43f0328edbc71ec3c8efc490cdd5c5d2d8904e27650fbfb7caa250ffbe3",
+		"index.js": "8ba1f8966c155c820f981155e77155163e12292504fdbe1a85aa2ddf197f47dd",
+		"module.json": "f0acc601a6e5e0eb76cfc5799b87194b27714043dc098d5a14d32482e54f3751",
+		"settings_migrator.js": "9d9c017380d0be53250aef2834f4ec435f737cc399e89735606804fa55b8c2b3",
+		"settings_structure.js": "8af846cfc0d3a530beacb2cd8e380a86b581457af7c888234b587015872585a9"
+	},
+	"defs": {
+		"C_DEL_ITEM": 2,
+		"C_PLAYER_LOCATION": 5,
+		"S_INVEN": 16,
+		"S_LOGIN": 12,
+		"S_SPAWN_ME": 3
+	}
+}
