@@ -24,7 +24,7 @@ module.exports = function Autotrasher(mod) {
         });
     }
 
-    mod.hook('S_INVEN', 16, (event) => {
+    mod.hook('S_INVEN', 17, (event) => {
         inven = event.first ? event.items : inven.concat(event.items);
         if (!event.more) {
             if (mod.settings.autotrash)
@@ -37,8 +37,8 @@ module.exports = function Autotrasher(mod) {
 
     let ui = null;
     if (global.TeraProxy.GUIMode) {
-        ui = new SettingsUI(mod, require('./settings_structure'), mod.settings, {height: 155}, {alwaysOnTop: true});
-        ui.on('update', settings => {mod.settings = settings;});
+        ui = new SettingsUI(mod, require('./settings_structure'), mod.settings, { height: 155 }, { alwaysOnTop: true });
+        ui.on('update', settings => { mod.settings = settings; });
 
         this.destructor = () => {
             if (ui) {
