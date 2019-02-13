@@ -2,23 +2,29 @@
 
 ---
 
-## Usage   
-Edit config.json via autotrash command to add items that you want trashed.    
-For example `8000, 8001, 8002, 8003, 8004, 8005, 8006, 8007`.
+## Console Command
+- Type `/8 autotrash` to enable or disable the module. Enabled by default.
 
 ---
 
-## Command
-* Type `/8 autotrash` to enable or disable the module.
-* Module is enabled by default.
+## Interface Command
+- Type `/8 autotrashconfig` to enable or disable the module and add items for deletion.
 
 ---
 
-## Credits
-Referenced Pinkie's rootbeer module for inventory parsing and item deletion.
+## Configuration
+- If you want to edit the config you need to start proxy and go to server selection.
+    - Will be generated afterwards in the modules folder.
+- A list of things that can be edited can be found here only for experienced users.
+	- Trashlist => Adding items which should be deleted automatically.
 
 ---
 
 ## Iteminfo
-* [Tera Proxy Module](https://github.com/Tera-Shiraneko/item-id-finder)
-* [Teralore Database](https://teralore.com/de/)
+- [Tera Proxy Module](https://github.com/Tera-Shiraneko/item-id-finder)
+- [Teralore Database](https://teralore.com/us/?sl=1)
+
+---
+
+## Note
+- The trashlist should be written with an comma between each item you add.
