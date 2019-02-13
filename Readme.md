@@ -15,7 +15,7 @@
 ## Configuration
 - If you want to edit the config you need to start proxy and go to server selection.
     - Will be generated afterwards in the modules folder.
-- A list of things that can be edited can be found here only for experienced users.
+- A list of things that can be edited can be found here. Only for experienced users.
 	- Trashlist => Adding items which should be deleted automatically.
 
 ---
