@@ -1,5 +1,5 @@
 const DefaultSettings = {
-    "autotrash": true,
+    "enabled": true,
     "trashlist": [],
 }
 

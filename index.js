@@ -10,15 +10,13 @@ module.exports = function Autotrasher(mod) {
 
     let inven = null;
 
-    mod.command.add('autotrashconfig', () => {
+    mod.command.add('autotrash', () => {
         if (ui) {
             ui.show();
+        } else {
+            mod.settings.enabled = !mod.settings.enabled;
+            mod.command.message(`Autotrasher is now ${mod.settings.enabled ? "enabled" : "disabled"}.`);
         }
-    });
-
-    mod.command.add('autotrash', () => {
-        mod.settings.autotrash = !mod.settings.autotrash;
-        mod.command.message(`Autotrasher is now ${autotrash ? "enabled" : "disabled"}.`);
     });
 
     function deleteitem(slot, amount) {
@@ -32,7 +30,7 @@ module.exports = function Autotrasher(mod) {
     mod.hook('S_INVEN', 17, (event) => {
         inven = event.first ? event.items : inven.concat(event.items);
         if (!event.more) {
-            if (mod.settings.autotrash)
+            if (mod.settings.enabled)
                 for (let item of inven)
                     if (item.slot < 40) continue
             else if (mod.settings.trashlist.includes(item.id)) deleteitem(item.slot, item.amount)

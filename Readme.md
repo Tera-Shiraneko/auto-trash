@@ -8,7 +8,7 @@
 ---
 
 ## Interface Command
-- Type `/8 autotrashconfig` to enable or disable the module and add items for deletion.
+- Same command like the one from console command listed above.
 
 ---
 
@@ -19,7 +19,7 @@
 ---
 
 - A list of things that can be edited can be found here. Only for experienced users.
-	- Trashlist => Adding items which should be deleted automatically.
+	- Trashlist => Add item id's of the items which should be deleted automatically.
 
 ---
 

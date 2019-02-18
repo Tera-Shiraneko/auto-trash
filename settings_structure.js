@@ -1,6 +1,6 @@
 module.exports = [
     {
-        "key": "autotrash",
+        "key": "enabled",
         "name": "Automatic discarding of items in your trashlist.",
         "type": "bool"
     },
