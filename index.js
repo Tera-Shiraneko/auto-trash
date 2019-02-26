@@ -15,7 +15,7 @@ module.exports = function Autotrasher(mod) {
             ui.show();
         } else {
             mod.settings.enabled = !mod.settings.enabled;
-            mod.command.message(`Autotrasher is now ${mod.settings.enabled ? "enabled" : "disabled"}.`);
+            mod.command.message(`Autotrasher is now ${mod.settings.enabled ? 'enabled' : 'disabled'}.`);
         }
     });
 
