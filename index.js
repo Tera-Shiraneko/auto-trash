@@ -27,7 +27,7 @@ module.exports = function Autotrasher(mod) {
         });
     }
 
-    mod.hook('S_INVEN', 17, (event) => {
+    mod.hook('S_INVEN', mod.majorPatchVersion < 80 ? 17 : 18, {order: -1000, filter: {fake: null}}, (event) => {
         inven = event.first ? event.items : inven.concat(event.items);
         if (!event.more) {
             if (mod.settings.enabled)

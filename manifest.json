@@ -1,13 +1,13 @@
 {
     "files": {
         "Readme.md": "39b095265d59b4bd3ec1c7e7c07d3457d9e5cfa41319a8fc1c95c83357f256d1",
-        "index.js": "35cac7f3b27588b551e7fd4151dc6c0ea86a6bb2fb6d93ee877d02c2c9c617ee",
+        "index.js": "f0ca317f642be072c4858c527c92e2a66206b39335924ee36892d8d99de302fb",
         "module.json": "e5763ad351641a696b922261c73110d5c021b98f3a421720dc99fd501bc3afe9",
         "settings_migrator.js": "f599be4abaa252f115f472911b4615ca037a723e103acc684f650b372dca021d",
         "settings_structure.js": "61a683262ce1cdda76eb7908564049f6b15a382b7cfc9dce992fed319bf03b1e"
     },
     "defs": {
         "C_DEL_ITEM": 2,
-        "S_INVEN": 17
+        "S_INVEN": [17,18]
     }
 }
