@@ -1,6 +1,6 @@
 const SettingsUI = require('tera-mod-ui').Settings;
 
-module.exports = function Autotrasher(mod) {
+module.exports = function Auto_Trasher(mod) {
 
     if (mod.proxyAuthor !== 'caali' || !global.TeraProxy) {
         mod.warn('You are trying to use this module on an unsupported legacy version of tera-proxy.');
@@ -15,11 +15,11 @@ module.exports = function Autotrasher(mod) {
             ui.show();
         } else {
             mod.settings.enabled = !mod.settings.enabled;
-            mod.command.message(`Autotrasher is now ${mod.settings.enabled ? 'enabled' : 'disabled'}.`);
+            mod.command.message(`Auto trasher is now ${mod.settings.enabled ? 'enabled' : 'disabled'}.`);
         }
     });
 
-    function deleteitem(slot, amount) {
+    function delete_item(slot, amount) {
         mod.send('C_DEL_ITEM', 2, {
             gameId: mod.game.me.gameId,
             slot: slot - 40,
@@ -27,13 +27,13 @@ module.exports = function Autotrasher(mod) {
         });
     }
 
-    mod.hook('S_INVEN', mod.majorPatchVersion < 80 ? 17 : 18, {order: -1000, filter: {fake: null}}, (event) => {
+    mod.hook('S_INVEN', 18, (event) => {
         inven = event.first ? event.items : inven.concat(event.items);
         if (!event.more) {
             if (mod.settings.enabled)
                 for (let item of inven)
                     if (item.slot < 40) continue
-            else if (mod.settings.trashlist.includes(item.id)) deleteitem(item.slot, item.amount)
+            else if (mod.settings.trashlist.includes(item.id)) delete_item(item.slot, item.amount)
             inven = null
         }
     });
