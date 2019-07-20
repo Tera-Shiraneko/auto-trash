@@ -6,7 +6,7 @@
 | Command | Description | Status |
 | :---: | :---: | :---: |
 | `/8 autotrash` | Automatic discarding of self defined items in your trash list. | Enabled by default. |
-| `/8 autotrash interval` | Here you can set the desired item deleter scan interval. | 25 seconds by default. |
+| `/8 autotrash interval + ms` | Here you can set the desired item deleter scan interval. | 25 seconds by default. |
 
 ---
 
@@ -41,3 +41,4 @@
 ## Note
 - If you enter multiple item id's in the config file or settings interface you need to put an comma between each item you add.
 - In case you want to edit the scan interval in the settings interface note that each step is 25 seconds up to 10 minutes.
+- The commands should be written without the plus just an space between it.
