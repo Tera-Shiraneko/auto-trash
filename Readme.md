@@ -1,25 +1,34 @@
-## Tera proxy module to discard undesired items from your inventory.
+## Tera toolbox module to discard undesired items from your inventory.
 
 ---
 
-## Console Command
-- Type `/8 autotrash` to enable or disable the module. Enabled by default.
+## Console Commands
+| Command | Description | Status |
+| :---: | :---: | :---: |
+| `/8 autotrash` | Automatic discarding of self defined items in your trash list. | Enabled by default. |
+| `/8 autotrash interval` | Here you can set the desired item deleter scan interval. | 25 seconds by default. |
 
 ---
 
-## Interface Command
-- Same command like the one from console command listed above.
+## Interface Commands
+| Command | Description |
+| :---: | :---: |
+| `/8 autotrash config` | To enable or disable the functions written above and edit your trash list. |
 
 ---
 
 ## Configuration
-- If you want to edit the config you need to start proxy and go to server selection.
-    - Will be generated afterwards in the modules folder.
+- If you want to edit the config file you need to start tera toolbox and go to the server selection.
+    - It will be generated afterwards in the modules folder.
 
 ---
 
-- A list of things that can be edited can be found here. Only for experienced users.
-	- Trashlist => Add item id's of the items which should be deleted automatically.
+- An list of things that can be edited can be found here. Only for experienced users.
+
+| Config Name | Description |
+| :---: | :---: |
+| `trash_list` | Here you can add or remove item id's to the trash list. |
+| `interval` | Here you can set the desired item deleter scan interval. |
 
 ---
 
@@ -30,4 +39,5 @@
 ---
 
 ## Note
-- The trashlist should be written with an comma between each item you add.
+- If you enter multiple item id's in the config file or settings interface you need to put an comma between each item you add.
+- In case you want to edit the scan interval in the settings interface note that each step is 25 seconds up to 10 minutes.

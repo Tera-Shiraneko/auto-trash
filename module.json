@@ -2,12 +2,12 @@
     "disableAutoUpdate": false,
     "name": "Autotrasher",
     "author": "Shalltearz",
-    "description": "Tera proxy module to discard undesired items from your inventory.",
+    "description": "Tera toolbox module to discard undesired items from your inventory.",
     "version": "1.0",
     "options": {
         "niceName": "Autotrasher",
         "guiName": "Autotrasher",
-        "settingsVersion": 1,
+        "settingsVersion": 1.1,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js"
     },

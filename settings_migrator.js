@@ -1,17 +1,28 @@
-const DefaultSettings = {
-    "enabled": true,
-    "trashlist": [],
-}
+const fs = require('fs');
 
-module.exports = function MigrateSettings(from_ver, to_ver, settings) {
+const Default_Settings = {
+    "enabled": true,
+    "interval": 25000,
+    "trash_list": []
+};
+
+module.exports = function Migrate_Settings(from_ver, to_ver, settings) {
     if (from_ver === undefined) {
-        // Migrate legacy config file
-        return Object.assign(Object.assign({}, DefaultSettings), settings);
+        // Migrate legacy config file.
+        return Object.assign(Object.assign({}, Default_Settings), settings);
     } else if (from_ver === null) {
-        // No config file exists, use default settings
-        return DefaultSettings;
-    } else {
-        // Migrate from older version (using the new system) to latest one
-        throw new Error('So far there is only one settings version and this should never be reached!');
+        // No config file exists, use default settings.
+        return Default_Settings;
+    } else if (from_ver + 0.1 < to_ver) {
+        // Migrate from older version (using the new system) to latest one.
+        settings = Migrate_Settings(from_ver, from_ver + 0.1, settings);
+        return Migrate_Settings(from_ver + 0.1, to_ver, settings);
     }
-}
+    switch (to_ver) {
+        // Switch for each version step that upgrades to the next version.
+        case 1.1:
+            fs.unlinkSync(__dirname + "/config.json");
+            break;
+    }
+    return Default_Settings;
+};
