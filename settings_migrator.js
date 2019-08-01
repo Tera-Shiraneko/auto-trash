@@ -20,7 +20,7 @@ module.exports = function Migrate_Settings(from_ver, to_ver, settings) {
     }
     switch (to_ver) {
         // Switch for each version step that upgrades to the next version.
-        case 1.1:
+        case 1.5:
             fs.unlinkSync(__dirname + "/config.json");
             break;
     }

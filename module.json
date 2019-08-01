@@ -1,13 +1,13 @@
 {
     "disableAutoUpdate": false,
-    "name": "Autotrasher",
+    "name": "Auto Trash",
     "author": "Shalltearz",
     "description": "Tera toolbox module to discard undesired items from your inventory.",
     "version": "1.0",
     "options": {
-        "niceName": "Autotrasher",
-        "guiName": "Autotrasher",
-        "settingsVersion": 1.1,
+        "niceName": "Auto Trash",
+        "guiName": "Auto Trash",
+        "settingsVersion": 1.5,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js"
     },
