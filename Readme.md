@@ -7,8 +7,8 @@
 | :---: | :---: | :---: |
 | `/8 autotrash` | Automatic discarding of self defined items in your trash list. | Enabled by default. |
 | `/8 autotrash interval + ms` | To set the desired item deleter scan interval. | 25 seconds by default. |
-| `/8 autotrash add + chat link` | To add the desired items to the trash list. |  |
-| `/8 autotrash remove + chat link` | To remove the desired items from the trash list. |  |
+| `/8 autotrash add + link` | To add the desired items to the trash list. |  |
+| `/8 autotrash remove + link` | To remove the desired items from the trash list. |  |
 | `/8 autotrash clear` | To clear all added items from the trash list. |  |
 | `/8 autotrash show` | To show all added items with their names and id's in your proxy chat. |  |
 
