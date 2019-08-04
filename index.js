@@ -21,43 +21,43 @@ module.exports = function Auto_Trash(mod) {
             check_interval();
         }
         else if (arg_1 === 'interval') {
-            if (arg_2 >= 25000 && arg_2 <= 600000) {
+            if (arg_2 >= 5000 && arg_2 <= 60000) {
                 mod.settings.interval = Number.parseInt(arg_2);
                 mod.command.message(`[Settings] Scan interval set to | ${mod.settings.interval / 1000} | seconds.`.clr('009dff'));
                 check_interval();
             }
-            else if (arg_2 < 25000 || arg_2 > 600000) {
-                mod.command.message('[Error] Scan interval must be set between | 25000 | and | 600000 | milliseconds.'.clr('ff1d00'));
+            else if (arg_2 < 5000 || arg_2 > 60000) {
+                mod.command.message('[Error] Scan interval must be set between | 5000 | and | 60000 | milliseconds.'.clr('ff1d00'));
             }
         }
         else if (arg_1 === 'add' && arg_2) {
-            const item_info = mod.game.inventory.findInBag(get_item_id_per_chat_link(arg_2));
-            const item_index = mod.settings.trash_list.indexOf(item_info.data.id);
+            const item_info = mod.game.data.items.get(get_item_id_per_chat_link(arg_2));
+            const item_index = mod.settings.trash_list.indexOf(item_info.id);
             if (item_info && item_index === -1) {
-                mod.settings.trash_list.push(item_info.data.id);
-                mod.command.message(`[Settings] Item | ${item_info.data.name} | with the item id | ${item_info.data.id} | added to the trash list.`.clr('009dff'));
+                mod.settings.trash_list.push(item_info.id);
+                mod.command.message(`[Settings] Item | ${item_info.name} | with the item id | ${item_info.id} | added to the trash list.`.clr('009dff'));
                 check_interval();
             }
-            else if (item_info === undefined) {
+            else if (!item_info) {
                 mod.command.message('[Error] The module can not find any item data which is needed for adding the id to the trash list.'.clr('ff1d00'));
             }
             else if (item_index != -1) {
-                mod.command.message(`[Error] Item | ${item_info.data.name} | with the item id | ${item_info.data.id} | is already added to the trash list.`.clr('ff1d00'));
+                mod.command.message(`[Error] Item | ${item_info.name} | with the item id | ${item_info.id} | is already added to the trash list.`.clr('ff1d00'));
             }
         }
         else if (arg_1 === 'remove' && arg_2) {
-            const item_info = mod.game.inventory.findInBag(get_item_id_per_chat_link(arg_2));
-            const item_index = mod.settings.trash_list.indexOf(item_info.data.id);
+            const item_info = mod.game.data.items.get(get_item_id_per_chat_link(arg_2));
+            const item_index = mod.settings.trash_list.indexOf(item_info.id);
             if (item_info && item_index != -1) {
                 mod.settings.trash_list.splice(item_index, 1);
-                mod.command.message(`[Settings] Item | ${item_info.data.name} | with the item id | ${item_info.data.id} | removed from the trash list.`.clr('009dff'));
+                mod.command.message(`[Settings] Item | ${item_info.name} | with the item id | ${item_info.id} | removed from the trash list.`.clr('009dff'));
                 check_interval();
             }
-            else if (item_info === undefined) {
+            else if (!item_info) {
                 mod.command.message('[Error] The module can not find any item data which is needed for adding the id to the trash list.'.clr('ff1d00'));
             }
             else if (item_index === -1) {
-                mod.command.message(`[Error] Item | ${item_info.data.name} | with the item id | ${item_info.data.id} | can not be found in the trash list.`.clr('ff1d00'));
+                mod.command.message(`[Error] Item | ${item_info.name} | with the item id | ${item_info.id} | can not be found in the trash list.`.clr('ff1d00'));
             }
         }
         else if (arg_1 === 'clear') {
@@ -135,8 +135,8 @@ module.exports = function Auto_Trash(mod) {
     };
 
     const check_config_file = () => {
-        if (mod.settings.interval < 25000 || mod.settings.interval > 600000) {
-            mod.settings.interval = 25000;
+        if (mod.settings.interval < 5000 || mod.settings.interval > 60000) {
+            mod.settings.interval = 5000;
             mod.error('Invalid interval settings detected default settings will be applied.');
         }
         if (!Array.isArray(mod.settings.trash_list)) {

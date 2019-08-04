@@ -1,10 +1,10 @@
 {
     "files": {
-        "Readme.md": "639e17cfd6cbc370ca90fc4737353cd703571949cb23e11a92429c8173b78978",
-        "index.js": "43140136c8fc1070a35282b6715ffdf018eaaf74b54b658f1ff436ebf7968c1d",
+        "Readme.md": "6731990915f8c2063853bdc67a81beee9e8cc912a6fbb963ff3d528c76e1e904",
+        "index.js": "2802163dc1ea12e75a2c3c23a113be7368512f80d303c1777e724e01a154b7b0",
         "module.json": "dfa5de8559a09ed7f9d85d83b49d62f53b36f6b064ad2267e307d6d3a573d319",
-        "settings_migrator.js": "58190097fd6678f6ec3f3149c00f09c14cda2eb396e0793956af91a011a1007f",
-        "settings_structure.js": "e40e69344bdbc28db746a1f1cbcfea9bdaf0532d2fba0e8323c9d41c9af7bc99"
+        "settings_migrator.js": "c638df68c0076a8dbae3b133a4e846fa72aafbcc859deeb4e14e71cf8e75354b",
+        "settings_structure.js": "2b23c5adee7be32d75bff6818b9d143e7572e8b5febb9fcc8cf2e51c9a0dea37"
     },
     "defs": {
         "C_DEL_ITEM": 2

@@ -8,9 +8,9 @@ module.exports = [
         "key": "interval",
         "name": "Here you can set the desired item deleter scan interval.",
         "type": "range",
-        "min": 25000,
-        "max": 600000,
-        "step": 25000
+        "min": 5000,
+        "max": 60000,
+        "step": 5000
     },
     {
         "key": "trash_list",

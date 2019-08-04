@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const Default_Settings = {
     "enabled": true,
-    "interval": 25000,
+    "interval": 5000,
     "trash_list": []
 };
 
