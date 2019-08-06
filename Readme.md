@@ -7,10 +7,10 @@
 | :---: | :---: | :---: |
 | `/8 autotrash` | Automatic discarding of self defined items in your trash list. | Enabled by default. |
 | `/8 autotrash interval + ms` | To set the desired item deleter scan interval. | 5 seconds by default. |
-| `/8 autotrash add + link` | To add the desired items to the trash list. |  |
-| `/8 autotrash remove + link` | To remove the desired items from the trash list. |  |
-| `/8 autotrash clear` | To clear all added items from the trash list. |  |
-| `/8 autotrash show` | To show all added items with their names and id's in your proxy chat. |  |
+| `/8 autotrash add + chat link` | To add the desired items to the trash list. |  |
+| `/8 autotrash remove + chat link` | To remove the desired items from the trash list. |  |
+| `/8 autotrash clear` | To remove all added items from the trash list. |  |
+| `/8 autotrash show` | To show all added items with their names and id's in your ingame chat. |  |
 
 ---
 
@@ -36,7 +36,7 @@
 
 ---
 
-## Iteminfo
+## How To Get Item Id's
 - [Tera Toolbox Module](https://github.com/Tera-Shiraneko/item-id-finder)
 - [Teralore Database](https://teralore.com/us/?sl=1)
 
@@ -44,6 +44,7 @@
 
 ## Note
 - If you enter multiple item id's in the config file or settings interface you need to put an comma between each item you add.
-- In case you want to edit the scan interval in the settings interface note that each step is 5 seconds up to 1 minute.
+- In case you want to edit the scan interval in the settings interface notice that each step is 5 seconds up to 1 minute.
 - To add an item link into the chat just press ctrl and left mouse onto the desired item.
+- The language of the item name is depending of your ingame language settings.
 - The commands should be written without the plus just an space between it.
