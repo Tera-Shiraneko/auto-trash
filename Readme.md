@@ -36,7 +36,7 @@
 
 ---
 
-## How To Get Item Id's
+## Iteminfo
 - [Tera Toolbox Module](https://github.com/Tera-Shiraneko/item-id-finder)
 - [Teralore Database](https://teralore.com/us/?sl=1)
 
