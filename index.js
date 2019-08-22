@@ -97,13 +97,24 @@ module.exports = function Auto_Trash(mod) {
     };
 
     const delete_items = () => {
-        mod.game.inventory.findAllInBag(mod.settings.trash_list).forEach(item => {
-            mod.send('C_DEL_ITEM', 2, {
-                gameId: mod.game.me.gameId,
-                slot: item.slot,
-                amount: item.amount
+        if (mod.majorPatchVersion < 85) {
+            mod.game.inventory.findAllInBag(mod.settings.trash_list).forEach(item => {
+                mod.send('C_DEL_ITEM', 2, {
+                    gameId: mod.game.me.gameId,
+                    slot: item.slot,
+                    amount: item.amount
+                });
             });
-        });
+        } else {
+            mod.game.inventory.findAllInBagOrPockets(mod.settings.trash_list).forEach(item => {
+                mod.send('C_DEL_ITEM', 3, {
+                    gameId: mod.game.me.gameId,
+                    pocket: item.pocket,
+                    slot: item.slot,
+                    amount: item.amount
+                });
+            });
+        }
     };
 
     const stop_searching = () => {
