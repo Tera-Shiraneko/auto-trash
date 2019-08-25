@@ -4,12 +4,6 @@ const SettingsUI = require('tera-mod-ui').Settings;
 
 module.exports = function Auto_Trash(mod) {
 
-    if (mod.proxyAuthor !== 'caali' || !global.TeraProxy) {
-        mod.warn('You are trying to use this module on an unsupported legacy version of tera-proxy.');
-        mod.warn('The module may not work as expected, and even if it works for now, it may break at any point in the future!');
-        mod.warn('It is highly recommended that you download the latest official version from the #toolbox channel in http://tiny.cc/caalis-tera-toolbox');
-    }
-
     mod.game.initialize('inventory');
 
     let search_interval = null;
@@ -17,7 +11,7 @@ module.exports = function Auto_Trash(mod) {
     mod.command.add('autotrash', (arg_1, arg_2) => {
         if (!arg_1) {
             mod.settings.enabled = !mod.settings.enabled;
-            mod.command.message(`${mod.settings.enabled ? '[Settings] The module is now enabled'.clr('00ff04') : '[Settings] The module is now disabled'.clr('ff1d00')}.`);
+            mod.command.message(`${mod.settings.enabled ? '[Settings] The module is now enabled.'.clr('00ff04') : '[Settings] The module is now disabled.'.clr('ff1d00')}`);
             check_interval();
         }
         else if (arg_1 === 'interval') {
