@@ -19,8 +19,7 @@ module.exports = function Auto_Trash(mod) {
                 mod.settings.interval = Number.parseInt(arg_2);
                 mod.command.message(`[Settings] Scan interval set to | ${mod.settings.interval / 1000} | seconds.`.clr('009dff'));
                 check_interval();
-            }
-            else if (arg_2 < 5000 || arg_2 > 60000) {
+            } else {
                 mod.command.message('[Error] Scan interval must be set between | 5000 | and | 60000 | milliseconds.'.clr('ff1d00'));
             }
         }
