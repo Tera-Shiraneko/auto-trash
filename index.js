@@ -1,4 +1,4 @@
-String.prototype.clr = function(hex_color) { return `<font color='#${hex_color}'>${this}</font>`; };
+String.prototype.clr = function(hex_color) { return `<font color='#${hex_color}'>${this}</font>`; }
 
 const SettingsUI = require('tera-mod-ui').Settings;
 
@@ -91,24 +91,14 @@ module.exports = function Auto_Trash(mod) {
     };
 
     const delete_items = () => {
-        if (mod.majorPatchVersion < 85) {
-            mod.game.inventory.findAllInBag(mod.settings.trash_list).forEach(item => {
-                mod.send('C_DEL_ITEM', 2, {
-                    gameId: mod.game.me.gameId,
-                    slot: item.slot,
-                    amount: item.amount
-                });
+        mod.game.inventory.findAllInBagOrPockets(mod.settings.trash_list).forEach(item => {
+            mod.send('C_DEL_ITEM', 3, {
+                gameId: mod.game.me.gameId,
+                pocket: item.pocket,
+                slot: item.slot,
+                amount: item.amount
             });
-        } else {
-            mod.game.inventory.findAllInBagOrPockets(mod.settings.trash_list).forEach(item => {
-                mod.send('C_DEL_ITEM', 3, {
-                    gameId: mod.game.me.gameId,
-                    pocket: item.pocket,
-                    slot: item.slot,
-                    amount: item.amount
-                });
-            });
-        }
+        });
     };
 
     const stop_searching = () => {
@@ -162,8 +152,8 @@ module.exports = function Auto_Trash(mod) {
             if (typeof mod.settings.trash_list === 'string') {
                 mod.settings.trash_list = mod.settings.trash_list.split(/\s*(?:,|$)\s*/).map(Number);
             }
-            check_interval();
             mod.settings = settings;
+            check_interval();
         });
         this.destructor = () => {
             if (ui) {

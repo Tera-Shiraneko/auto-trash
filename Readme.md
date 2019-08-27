@@ -1,8 +1,8 @@
-## Tera toolbox module to discard undesired items from your inventory.
+### Tera toolbox module to discard undesired items from your inventory.
 
 ---
 
-## Console Commands
+### Console Commands
 | Command | Description | Status |
 | :---: | :---: | :---: |
 | `/8 autotrash` | Automatic discarding of self defined items in your trash list. | Enabled by default. |
@@ -14,14 +14,14 @@
 
 ---
 
-## Interface Commands
+### Interface Commands
 | Command | Description |
 | :---: | :---: |
 | `/8 autotrash config` | To enable or disable the functions written above and edit your trash list. |
 
 ---
 
-## Configuration
+### Configuration
 - If you want to edit the config file you need to start tera toolbox and go to the server selection.
     - It will be generated afterwards in the modules folder.
 
@@ -36,13 +36,13 @@
 
 ---
 
-## Iteminfo
+### Iteminfo
 - [Tera Toolbox Module](https://github.com/Tera-Shiraneko/item-id-finder)
 - [Teralore Database](https://teralore.com/us/?sl=1)
 
 ---
 
-## Note
+### Note
 - If you enter multiple item id's in the config file or settings interface you need to put an comma between each item you add.
 - In case you want to edit the scan interval in the settings interface notice that each step is 5 seconds up to 1 minute.
 - To add an item link into the chat just press ctrl and left mouse onto the desired item.
