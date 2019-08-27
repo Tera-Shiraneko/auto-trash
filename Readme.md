@@ -43,7 +43,7 @@
 ---
 
 ### Note
-- If you enter multiple item id's in the config file or settings interface you need to put an comma between each item you add.
+- If you enter multiple item id's in the config file or settings interface you need to put an comma between each item.
 - In case you want to edit the scan interval in the settings interface notice that each step is 5 seconds up to 1 minute.
 - To add an item link into the chat just press ctrl and left mouse onto the desired item.
 - The language of the item name is depending of your ingame language settings.
