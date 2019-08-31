@@ -1,4 +1,4 @@
-String.prototype.clr = function(hex_color) { return `<font color='#${hex_color}'>${this}</font>`; }
+String.prototype.clr = function(hex_color) { return `<font color='#${hex_color}'>${this}</font>`; };
 
 const SettingsUI = require('tera-mod-ui').Settings;
 
