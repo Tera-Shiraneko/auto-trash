@@ -38,7 +38,7 @@
 
 ### Iteminfo
 - [Tera Toolbox Module](https://github.com/Tera-Shiraneko/item-id-finder)
-- [Teralore Database](https://teralore.com/us/?sl=1)
+- [Teralore Database Items](https://teralore.com/us/?sl=1)
 
 ---
 
