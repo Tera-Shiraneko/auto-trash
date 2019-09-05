@@ -38,7 +38,7 @@
 
 ### Iteminfo
 - [Tera Toolbox Module](https://github.com/Tera-Shiraneko/item-id-finder)
-- [Tera Damage Meter Data Items](https://github.com/neowutran/TeraDpsMeterData/tree/master/items)
+- [Tera Damage Meter Data => Items](https://github.com/neowutran/TeraDpsMeterData/tree/master/items)
 
 ---
 
