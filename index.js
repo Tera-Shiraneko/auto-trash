@@ -112,7 +112,7 @@ module.exports = function Auto_Trash(mod) {
     });
 
     const check_interval = () => {
-        if (mod.settings.enabled) {
+        if (mod.settings.enabled && mod.settings.trash_list.length != 0) {
             stop_searching();
             start_searching();
         } else {

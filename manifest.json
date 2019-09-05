@@ -1,8 +1,8 @@
 {
     "files": {
-        "Readme.md": "9357d2fbc0e3ac04fbfe5570bdb30e3bb57725e55a45be4546e963fe6f59a355",
-        "index.js": "25fe099dac0c565faf41180abacb1655b8a28517dd6ad65dc5676d5689a56dc8",
-        "module.json": "dfa5de8559a09ed7f9d85d83b49d62f53b36f6b064ad2267e307d6d3a573d319",
+        "Readme.md": "fb0ef56ce63e4965e04298bb1491a6b98fa44ee75a68a16a089e348fc3c780ae",
+        "index.js": "b71157b74247ec37b2f2339aac7fde88d558edac6aa52210c3d6aa35e424b2ee",
+        "module.json": "eb115a4226037856517eb871dae88f53b561b27bd24aca919a4c60330fd1b8c3",
         "settings_migrator.js": "f520a1850d3036c99d2ac8e1826840e83d89e46b748441dbaf3418a5e2b9ea01",
         "settings_structure.js": "2b23c5adee7be32d75bff6818b9d143e7572e8b5febb9fcc8cf2e51c9a0dea37"
     },
