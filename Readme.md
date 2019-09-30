@@ -1,11 +1,11 @@
-### Tera toolbox module to automatically discard undesired items in your inventory or pocket.
+### Tera toolbox module which is discarding undesired items from your inventory or pocket.
 
 ---
 
 ### Console Commands
 | Command | Description | Status |
 | :---: | :---: | :---: |
-| `/8 autotrash` | To automatically discard undesired items in your inventory or pocket. | Enabled by default. |
+| `/8 autotrash` | To automatically discard undesired items from your inventory or pocket. | Enabled by default. |
 | `/8 autotrash interval + ms` | To set the desired item deleter scan interval. | 5 seconds by default. |
 | `/8 autotrash add + item link` | To add the desired items to the trash list. |  |
 | `/8 autotrash remove + item link` | To remove the desired items from the trash list. |  |

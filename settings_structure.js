@@ -1,7 +1,7 @@
 module.exports = [
     {
         "key": "enabled",
-        "name": "Automatically discard undesired items in your inventory or pocket.",
+        "name": "Automatically discard undesired items from your inventory or pocket.",
         "type": "bool"
     },
     {
