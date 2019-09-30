@@ -1,7 +1,7 @@
 module.exports = [
     {
         "key": "enabled",
-        "name": "Automatic discarding of self defined items in your trash list.",
+        "name": "Automatically discard self defined items in your inventory or pocket.",
         "type": "bool"
     },
     {

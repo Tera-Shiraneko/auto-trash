@@ -5,12 +5,12 @@
 ### Console Commands
 | Command | Description | Status |
 | :---: | :---: | :---: |
-| `/8 autotrash` | Automatic discarding of self defined items in your trash list. | Enabled by default. |
+| `/8 autotrash` | To automatically discard self defined items in your inventory or pocket. | Enabled by default. |
 | `/8 autotrash interval + ms` | To set the desired item deleter scan interval. | 5 seconds by default. |
 | `/8 autotrash add + item link` | To add the desired items to the trash list. |  |
 | `/8 autotrash remove + item link` | To remove the desired items from the trash list. |  |
 | `/8 autotrash clear` | To remove all added items from the trash list. |  |
-| `/8 autotrash show` | To show all added items with their names and id's in your ingame chat. |  |
+| `/8 autotrash show` | To show all added items with their names and id's in your toolbox chat. |  |
 
 ---
 
@@ -29,14 +29,14 @@
 
 - An list of things that can be edited can be found here. Only for experienced users.
 
-| Config Name | Description |
+| Name | Description |
 | :---: | :---: |
-| `trash_list` | Here you can add or remove item id's to the trash list. |
 | `interval` | Here you can set the desired item deleter scan interval. |
+| `trash_list` | Here you can add or remove item id's to the trash list. |
 
 ---
 
-### Iteminfo
+### Item Information
 - [Tera Toolbox Module](https://github.com/Tera-Shiraneko/item-id-finder)
 - [Tera Damage Meter Data => Items](https://github.com/neowutran/TeraDpsMeterData/tree/master/items)
 
