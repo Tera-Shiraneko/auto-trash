@@ -2,7 +2,7 @@
     "disableAutoUpdate": false,
     "name": "Auto Trash",
     "author": "Shalltearz",
-    "description": "Tera toolbox module to discard undesired items from your inventory or pocket.",
+    "description": "Tera toolbox module to automatically discard undesired items in your inventory or pocket.",
     "version": "1.0",
     "options": {
         "niceName": "Auto Trash",
