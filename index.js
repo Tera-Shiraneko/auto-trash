@@ -155,7 +155,7 @@ module.exports = function Auto_Trash(mod) {
     if (global.TeraProxy.GUIMode) {
         ui = new SettingsUI(mod, require('./settings_structure'), config, {
             alwaysOnTop: true,
-            width: 850,
+            width: 1000,
             height: 165
         });
         ui.on('update', settings => {
