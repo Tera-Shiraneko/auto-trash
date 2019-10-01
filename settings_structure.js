@@ -6,7 +6,7 @@ module.exports = [
     },
     {
         "key": "interval",
-        "name": "Here you can set the desired item deleter scan interval.",
+        "name": "Set the desired item deleter scan interval.",
         "type": "range",
         "min": 5000,
         "max": 60000,
@@ -14,7 +14,7 @@ module.exports = [
     },
     {
         "key": "trash_list",
-        "name": "Here you can add or remove item id's to the trash list.",
+        "name": "Add or remove item id's to the trash list.",
         "type": "string"
     }
 ];

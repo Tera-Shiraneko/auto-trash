@@ -7,9 +7,9 @@
 | :---: | :---: | :---: |
 | `/8 autotrash` | To automatically discard undesired items from your inventory or pocket. | Enabled by default. |
 | `/8 autotrash interval + ms` | To set the desired item deleter scan interval. | 5 seconds by default. |
-| `/8 autotrash add + item link` | To add the desired items to the trash list. |  |
-| `/8 autotrash remove + item link` | To remove the desired items from the trash list. |  |
-| `/8 autotrash clear` | To remove all added items from the trash list. |  |
+| `/8 autotrash add + link` | To add the desired item id's to the trash list. |  |
+| `/8 autotrash remove + link` | To remove the desired item id's from the trash list. |  |
+| `/8 autotrash clear` | To remove all added item id's from the trash list. |  |
 | `/8 autotrash show` | To show all added items with their names and id's in your toolbox chat. |  |
 
 ---
@@ -43,7 +43,7 @@
 ---
 
 ### Note
-- If you enter multiple item id's in the config file or settings interface you need to put an comma between each item.
 - In case you want to edit the scan interval in the settings interface notice that each step is 5 seconds up to 1 minute.
+- In case of multiple item id's in the config file or settings interface you need to seperate them with a comma.
 - To add an item link into the chat just press ctrl and left mouse onto the desired item.
 - The commands should be written without the plus just an space between it.
