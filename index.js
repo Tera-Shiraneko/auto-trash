@@ -97,49 +97,49 @@ module.exports = function Auto_Trash(mod) {
         stop_searching();
     });
 
-    const start_searching = () => {
+    function start_searching() {
         if (config.enabled && config.trash_list.length) {
             stop_searching();
             search_timer = mod.setInterval(delete_items, config.interval);
         }
-    };
+    }
 
-    const stop_searching = () => {
+    function stop_searching() {
         if (search_timer) {
             mod.clearInterval(search_timer);
             search_timer = null;
         }
-    };
+    }
 
-    const search_status = () => {
+    function search_status() {
         if (config.enabled && config.trash_list.length) {
             stop_searching();
             start_searching();
         } else {
             stop_searching();
         }
-    };
+    }
 
-    const delete_items = () => {
+    function delete_items() {
         mod.game.inventory.findAllInBagOrPockets(config.trash_list).forEach(item => {
             mod.send('C_DEL_ITEM', 3, {
-                gameId: player .gameId,
+                gameId: player.gameId,
                 pocket: item.pocket,
                 slot: item.slot,
                 amount: item.amount
             });
         });
-    };
+    }
 
-    const get_item_id_per_chat_link = (chat_link) => {
+    function get_item_id_per_chat_link(chat_link) {
         const expression = /#(\d*)@/;
         const item_id = chat_link.match(expression);
         if (item_id) {
             return Number.parseInt(item_id[1]);
         }
-    };
+    }
 
-    const check_config_file = () => {
+    function check_config_file() {
         if (config.interval < 5000 || config.interval > 60000) {
             config.interval = 5000;
             mod.error('Invalid interval settings detected default settings will be applied.');
@@ -148,7 +148,7 @@ module.exports = function Auto_Trash(mod) {
             config.trash_list = [];
             mod.error('Invalid trash list settings detected default settings will be applied.');
         }
-    };
+    }
 
     let ui = null;
 
