@@ -22,10 +22,10 @@ module.exports = function Auto_Trash(mod) {
         else if (arg_1 === 'interval') {
             if (arg_2 >= 5000 && arg_2 <= 60000) {
                 config.interval = Number.parseInt(arg_2);
-                command.message(`[Settings] Scan interval set to | ${config.interval / 1000} | seconds.`.clr('009dff'));
+                command.message(`[Settings] Scan interval set to ${config.interval / 1000} seconds.`.clr('009dff'));
                 search_status();
             } else {
-                command.message('[Warning] Scan interval must be set between | 5000 | and | 60000 | milliseconds.'.clr('ff00ff'));
+                command.message('[Warning] Scan interval must be set between 5000 and 60000 milliseconds.'.clr('ff00ff'));
             }
         }
         else if (arg_1 === 'add' && arg_2) {
@@ -33,14 +33,14 @@ module.exports = function Auto_Trash(mod) {
             const item_index = config.trash_list.indexOf(item_info.id);
             if (item_info && item_index === -1) {
                 config.trash_list.push(item_info.id);
-                command.message(`[Settings] Item | ${item_info.name} | with the id | ${item_info.id} | has been added to the trash list.`.clr('009dff'));
+                command.message(`[Settings] Item ${item_info.name} with the id ${item_info.id} has been added to the trash list.`.clr('009dff'));
                 search_status();
             }
             else if (!item_info) {
                 command.message('[Warning] The module can not find any item data which is needed for adding the id to the trash list.'.clr('ff00ff'));
             }
             else if (item_index != -1) {
-                command.message(`[Warning] Item | ${item_info.name} | with the id | ${item_info.id} | is already added to the trash list.`.clr('ff00ff'));
+                command.message(`[Warning] Item ${item_info.name} with the id ${item_info.id} is already added to the trash list.`.clr('ff00ff'));
             }
         }
         else if (arg_1 === 'remove' && arg_2) {
@@ -48,14 +48,14 @@ module.exports = function Auto_Trash(mod) {
             const item_index = config.trash_list.indexOf(item_info.id);
             if (item_info && item_index != -1) {
                 config.trash_list.splice(item_index, 1);
-                command.message(`[Settings] Item | ${item_info.name} | with the id | ${item_info.id} | has been removed from the trash list.`.clr('009dff'));
+                command.message(`[Settings] Item ${item_info.name} with the id ${item_info.id} has been removed from the trash list.`.clr('009dff'));
                 search_status();
             }
             else if (!item_info) {
                 command.message('[Warning] The module can not find any item data which is needed for removing the id from the trash list.'.clr('ff00ff'));
             }
             else if (item_index === -1) {
-                command.message(`[Warning] Item | ${item_info.name} | with the id | ${item_info.id} | can not be found in the trash list.`.clr('ff00ff'));
+                command.message(`[Warning] Item ${item_info.name} with the id ${item_info.id} can not be found in the trash list.`.clr('ff00ff'));
             }
         }
         else if (arg_1 === 'clear') {
@@ -72,7 +72,7 @@ module.exports = function Auto_Trash(mod) {
                 config.trash_list.forEach(item => {
                     const item_info = data.items.get(item);
                     if (item_info) {
-                        command.message(`[Info] Found item | ${item_info.name} | with the id | ${item_info.id} | in the trash list.`.clr('ffff00'));
+                        command.message(`[Info] Found item ${item_info.name} with the id ${item_info.id} in the trash list.`.clr('ffff00'));
                     } else {
                         command.message('[Warning] The module can not find any item data which is needed for showing the name and id of the item.'.clr('ff00ff'));
                     }
